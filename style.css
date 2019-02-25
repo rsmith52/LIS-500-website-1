@@ -1,3 +1,12 @@
+html {
+  margin: 20px;
+}
+
+nav {
+  border-bottom: solid 2px #6d435a;
+  width: 100%;
+}
+
 nav ul {
   display: inline-block;
 }
@@ -8,6 +17,22 @@ nav h1 {
 
 nav li {
   display: inline-block;
+  padding: 30px;
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff6978;
+  text-decoration: none;
+  border-bottom: thin #000 dotted;
+}
+
+nav a:visited {
+  color: #ff6978;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5 {
@@ -20,6 +45,10 @@ body {
 
 h1 {
   color: #ff6978
+}
+
+h2 {
+  color: #e75480;
 }
 
 h3 {
@@ -49,8 +78,25 @@ li {
 }
 
 .img2 {
-  display: table-cell;
-  float: right;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  flex: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+ display: flex;
 }
 
 .indent {
