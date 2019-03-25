@@ -15,6 +15,8 @@
         <a href="merritt-kopas.html">merritt k</a>
       </li>
     </ul>
+    <!-- Added date to the nav menu -->
+    <strong>Date: </strong> <?php echo date(l) . ", " . date(F) . " " . date(j) . " " . date(Y) ?>
   </nav>
 </head>
 
@@ -29,6 +31,14 @@
       </p>
       <h3>Articles about Leslie Miley</h3>
       <ul>
+        <!-- Old HTML for listing the links replaced by dynamic PHP above
+        <li>
+          <a href="https://medium.com/tech-diversity-files/thought-on-diversity-part-2-why-diversity-is-difficult-3dfd552fa1f7">Why Diversity is Difficult</a>
+        </li>
+        <li>
+          <a href="https://peopleofcolorintech.com/engineers/leslie-miley-on-optimism-working-with-obama-and-techs-role-in-producing-inequality/">Working with Obama - Interview</a>
+        </li>
+        End of Old HTML -->
         <?php
             $links = array(
               "Why Diversity is Difficult" => "https://medium.com/tech-diversity-files/thought-on-diversity-part-2-why-diversity-is-difficult-3dfd552fa1f7",
@@ -40,18 +50,16 @@
                 <a href = <?php echo $link ?> > <?php echo $title ?> </a>
               </li>
         <?php endforeach; ?>
-        <!-- Old HTML for listing the links replaced by dynamic PHP above
-        <li>
-          <a href="https://medium.com/tech-diversity-files/thought-on-diversity-part-2-why-diversity-is-difficult-3dfd552fa1f7">Why Diversity is Difficult</a>
-        </li>
-        <li>
-          <a href="https://peopleofcolorintech.com/engineers/leslie-miley-on-optimism-working-with-obama-and-techs-role-in-producing-inequality/">Working with Obama - Interview</a>
-        </li>
-        End of Old HTML -->
       </ul>
     </div>
     <div class="column">
-      <img class="img2" width="500px" src="miley.jpg" alt="Leslie Miley picture" />
+      <!-- Use PHP to check if the image exists and displays an error if it doesn't for some reason. -->
+      <?php if(file_exists("./miley.jpg")): ?>
+          <img class="img2" width="500px" src="miley.jpg" alt="Leslie Miley picture" />
+      <?php else: ?>
+          <p>Image not found.</p>
+      <?php endif; ?>
+
     </div>
   </div>
 </body>
