@@ -29,12 +29,25 @@
       </p>
       <h3>Articles about Leslie Miley</h3>
       <ul>
+        <?php
+            $links = array(
+              "Why Diversity is Difficult" => "https://medium.com/tech-diversity-files/thought-on-diversity-part-2-why-diversity-is-difficult-3dfd552fa1f7",
+              "Working with Obama - Interview" => "https://peopleofcolorintech.com/engineers/leslie-miley-on-optimism-working-with-obama-and-techs-role-in-producing-inequality/"
+            );
+        ?>
+        <?php foreach ($links as $title => $link): ?>
+              <li>
+                <a href = <?php echo $link ?> > <?php echo $title ?> </a>
+              </li>
+        <?php endforeach; ?>
+        <!-- Old HTML for listing the links replaced by dynamic PHP above
         <li>
           <a href="https://medium.com/tech-diversity-files/thought-on-diversity-part-2-why-diversity-is-difficult-3dfd552fa1f7">Why Diversity is Difficult</a>
         </li>
         <li>
           <a href="https://peopleofcolorintech.com/engineers/leslie-miley-on-optimism-working-with-obama-and-techs-role-in-producing-inequality/">Working with Obama - Interview</a>
         </li>
+        End of Old HTML -->
       </ul>
     </div>
     <div class="column">
