@@ -16,7 +16,7 @@
       </li>
     </ul>
     <!-- Added date to the nav menu -->
-    <strong>Date: </strong> <?php echo date(l) . ", " . date(F) . " " . date(j) . " " . date(Y) ?>
+    <strong>Date: </strong> <?php echo date(l) . ", " . date(F) . " " . date(j) . " " . date(Y); ?>
   </nav>
 </head>
 
@@ -60,6 +60,15 @@
           <p>Image not found.</p>
       <?php endif; ?>
 
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form action="process.php">
+        Enter Your Name: <input type="text" name="name"> <br>
+        Enter Your Email: <input type="text" name="email"> <br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </div>
 </body>
