@@ -64,6 +64,7 @@
   </div>
   <div class="row">
     <div class="column">
+      <h3>Sign up for more info on Leslie Miley</h3>
       <form action="process.php">
         Enter Your Name: <input type="text" name="name"> <br>
         Enter Your Email: <input type="text" name="email"> <br>
